@@ -5,9 +5,10 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import Roots from "./components/Roots";
 
 const routerLink = createBrowserRouter(createRoutesFromElements(
-
+  <Route path="/" element={<Roots/>}></Route>
 ))
 
 function App() {
