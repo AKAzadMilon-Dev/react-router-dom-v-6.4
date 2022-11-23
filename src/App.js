@@ -5,10 +5,19 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import Roots from "./components/Roots";
+import Roots from "./components/RootLayout";
+import Home from "./components/Home";
+import About from "./components/About";
+import Service from "./components/Service";
+import Userlist from "./components/Userlist";
 
 const routerLink = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={<Roots/>}></Route>
+  <Route path="/" element={<Roots/>}>
+    <Route index element={<Home/>}></Route>
+    <Route path="/about" element={<About/>}></Route>
+    <Route path="/service" element={<Service/>}></Route>
+    <Route path="/userlist" element={<Userlist/>}></Route>
+  </Route>
 ))
 
 function App() {
